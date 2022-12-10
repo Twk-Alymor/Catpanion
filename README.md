@@ -1,10 +1,10 @@
 # Catpanion
 
 
-### **minSdk:** 21
+**minSdk:** 21
 
 
-### Android 5.0 **Lollipop**
+Android 5.0 **Lollipop**
 
 
-### **targetSdk:** 32
+**targetSdk:** 32
