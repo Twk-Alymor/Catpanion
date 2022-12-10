@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/_beige"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".SignUp">
 
     <!-- Logo -->
     <ImageView
@@ -17,14 +17,14 @@
         android:contentDescription="@string/desc_catpanionlogo"
         app:srcCompat="@drawable/catpanion_logo" />
 
-    <!-- Login Start -->
+    <!-- Signup Start -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginBottom="30dp"
         android:fontFamily="@font/quicksand_bold"
-        android:text="@string/login"
+        android:text="@string/signup"
         android:textColor="@color/_black"
         android:textSize="25sp" />
     <!-- Email -->
@@ -80,7 +80,7 @@
         android:drawableStart="@drawable/ic_lock"
         android:drawablePadding="10dp"
         android:paddingStart="10dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="40dp"
         android:hint="@string/password1"
         android:textColor="@color/_beige"
         android:textColorHint="@color/_hint_Darkbg"
@@ -88,52 +88,26 @@
         android:textSize="20sp"
         android:autofillHints="" />
 
-    <!-- Forgot Password? -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="5dp"
-        android:fontFamily="@font/quicksand_book"
-        android:text="@string/forgot_password"
-        android:textColor="#00695C"
-        android:textSize="15sp" />
+    <!-- End of Signup Edit Text -->
 
-    <!-- End of Login Edit Text -->
-
-    <!-- Remember me? -->
-    <CheckBox
-        android:id="@+id/remember_me"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="15dp"
-        android:fontFamily="@font/quicksand_book"
-        android:minHeight="48dp"
-        android:text="@string/remember_me"
-        android:textColor="#616161"
-        tools:ignore="TextContrastCheck" />
-
-    <!-- Login Button -->
+    <!-- Signup Button -->
     <Button
         android:id="@+id/button"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/custom_button"
-        android:text="@string/loginBTN"
+        android:text="@string/signupBTN"
         android:textColor="@color/black"
-        tools:ignore="DuplicateSpeakableTextCheck" />
-
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:fontFamily="@font/quicksand_book"
-        android:text="@string/don_t_have_an_account"
+        android:text="@string/already_a_user"
         android:textColor="@color/_black"
         android:textSize="15sp"
         />
@@ -143,9 +117,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:fontFamily="@font/quicksand_book"
+        android:minWidth="48dp"
         android:minHeight="48dp"
-        android:onClick="toSignup"
-        android:text="@string/sign_up_link"
+        android:onClick="toLogin"
+        android:text="@string/login"
         android:textColor="#00695C"
         android:textSize="15sp" />
 
