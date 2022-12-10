@@ -91,15 +91,18 @@
     <!-- End of Signup Edit Text -->
 
     <!-- Signup Button -->
+
     <Button
         android:id="@+id/button"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="@font/quicksand_bold"
         android:layout_marginBottom="30dp"
         android:background="@drawable/custom_button"
         android:text="@string/signupBTN"
         android:textColor="@color/black"
+        android:onClick="toSignupDetails"
         />
 
     <TextView

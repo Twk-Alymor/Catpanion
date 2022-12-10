@@ -14,4 +14,12 @@
     <string name="signupBTN">Signup</string>
     <string name="signup">Signup</string>
     <string name="already_a_user">Already a user?</string>
+    <string name="name">Name:</string>
+    <string name="name1">Name</string>
+    <string name="address">Address:</string>
+    <string name="address1">Address</string>
+    <string name="phone_number">Phone Number:</string>
+    <string name="phone_number1">Phone Number</string>
+    <string name="done">Done</string>
+    <string name="fill_up">Fill-up</string>
 </resources>

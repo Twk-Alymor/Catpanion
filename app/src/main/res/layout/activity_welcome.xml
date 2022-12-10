@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_beige"
+    android:orientation="vertical"
+    tools:context=".Welcome">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="201dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/desc_catpanionlogo"
+        app:srcCompat="@drawable/catpanion_logo" />
+
+    <!-- Login Start -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Hello, User"
+        android:textColor="@color/_black"
+        android:textSize="40sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="First, let's have a quick survey to check if you meet the basic requirements needed to adopt. "
+        android:lineSpacingExtra="20sp"
+        android:textAlignment="center"
+        android:textColor="@color/_black"
+        android:textSize="30sp" />
+
+    <!-- Proceed Button -->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Proceed to Quick Survey"
+        android:textColor="@color/black"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+</LinearLayout>

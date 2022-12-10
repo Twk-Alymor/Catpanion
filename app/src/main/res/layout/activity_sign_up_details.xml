@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_beige"
+    android:orientation="vertical"
+    tools:context=".SignUpDetails">
+
+    <!-- Fill up Start -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/fill_up"
+        android:textColor="@color/_black"
+        android:textSize="25sp" />
+
+    <!-- Name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/name"
+        android:textColor="@color/_black"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dp"
+        android:autofillHints=""
+        android:background="@drawable/custom_button"
+        android:elevation="10dp"
+        android:fontFamily="@font/quicksand_book"
+        android:hint="@string/name1"
+        android:inputType="text"
+        android:paddingStart="10dp"
+        android:textColor="@color/_beige"
+        android:textColorHint="@color/_hint_Darkbg"
+        android:textSize="18sp" />
+
+    <!-- Address -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/address"
+        android:textColor="@color/_black"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextAddress"
+        android:layout_width="350dp"
+        android:layout_height="79dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dp"
+        android:autofillHints=""
+        android:background="@drawable/custom_button"
+        android:elevation="10dp"
+        android:fontFamily="@font/quicksand_book"
+        android:hint="@string/address1"
+        android:inputType="textMultiLine"
+        android:lineSpacingExtra="5sp"
+        android:paddingStart="10dp"
+        android:textColor="@color/_beige"
+        android:textColorHint="@color/_hint_Darkbg"
+        android:textSize="18sp" />
+
+    <!-- Phone Number -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/phone_number"
+        android:textColor="@color/_black"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dp"
+        android:autofillHints=""
+        android:background="@drawable/custom_button"
+        android:elevation="10dp"
+        android:fontFamily="@font/quicksand_book"
+        android:hint="@string/phone_number1"
+        android:inputType="phone"
+        android:paddingStart="10dp"
+        android:textColor="@color/_beige"
+        android:textColorHint="@color/_hint_Darkbg"
+        android:textSize="18sp" />
+
+    <!-- Email -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/email"
+        android:textColor="@color/_black"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextEmail1"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dp"
+        android:autofillHints=""
+        android:background="@drawable/custom_button"
+        android:elevation="10dp"
+        android:fontFamily="@font/quicksand_book"
+        android:hint="@string/email1"
+        android:inputType="textEmailAddress"
+        android:paddingStart="10dp"
+        android:textColor="@color/_beige"
+        android:textColorHint="@color/_hint_Darkbg"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/quicksand_bold"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/done"
+        android:textColor="@color/black"
+        android:onClick="Signup_Done"
+        />
+
+</LinearLayout>
