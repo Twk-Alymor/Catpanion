@@ -22,4 +22,6 @@
     <string name="phone_number1">Phone Number</string>
     <string name="done">Done</string>
     <string name="fill_up">Fill-up</string>
+    <string name="desc_userlogo">UserLogo</string>
+    <string name="desc_quick_tips">Quick Tips</string>
 </resources>

@@ -6,12 +6,19 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/catpanion_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/catpanion_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Catpanion"
         tools:targetApi="31">
+        <activity
+            android:name=".Home"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".Welcome"
             android:exported="false">
