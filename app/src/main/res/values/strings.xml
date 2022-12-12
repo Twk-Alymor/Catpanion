@@ -24,4 +24,7 @@
     <string name="fill_up">Fill-up</string>
     <string name="desc_userlogo">UserLogo</string>
     <string name="desc_quick_tips">Quick Tips</string>
+    <string name="nameofCat">Name:</string>
+    <string name="catage">Age:</string>
+    <string name="no_heart">No heart</string>
 </resources>

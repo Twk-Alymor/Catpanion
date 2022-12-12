@@ -10,8 +10,9 @@
 
     <!-- APP COLORS -->
     <color name="_beige">#E8E2CE</color>
-    <color name="_blue">#88A9C3</color>
+    <color name="_darkBeige">#D0BEA4</color>
     <color name="_black">#282129</color>
+    <color name="_blue">#88A9C3</color>
     <color name="_green">#82A696</color>
 
     <color name="_hint_Darkbg">#6E6959</color>

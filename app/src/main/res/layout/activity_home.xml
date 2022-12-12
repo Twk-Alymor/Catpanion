@@ -35,7 +35,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
-
+            <!-- User -->
             <ImageButton
                 android:id="@+id/userImagebtn"
                 android:layout_width="65dp"
@@ -45,7 +45,7 @@
                 android:background="@color/_beige"
                 android:contentDescription="@string/desc_userlogo"
                 app:srcCompat="@drawable/ic_person" />
-
+            <!-- Quick Tips -->
             <ImageButton
                 android:id="@+id/quicktipsImagebtn"
                 android:layout_width="53dp"
@@ -67,12 +67,115 @@
 
         android:contentDescription="@string/desc_catpanionlogo"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <!-- End of App Bar -->
 
+        <!-- CardView Container -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:background="@color/_black"
             tools:context=".Home">
+            <!-- Card #1 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="11dp"
+                    app:cardUseCompatPadding="true" >
+                    <!-- Inside Card #1 -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="start|center"
+                        android:background="@color/_darkBeige">
+                        <!-- Picture -->
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/catImg1"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="10dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/cat1"
+                            app:shapeAppearanceOverlay="@style/Circular"
+                            app:strokeWidth="5dp"
+                            app:strokeColor="@color/_black"
+                            />
+
+
+
+                        <!-- Details -->
+
+                        <TextView
+                            android:id="@+id/cat_Name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginTop="26dp"
+                            android:layout_toEndOf="@+id/catName"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="Popoy"
+                            android:textColor="@color/_black"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/catName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="26dp"
+                            android:layout_toEndOf="@+id/catImg1"
+                            android:fontFamily="@font/quicksand_book"
+                            android:text="@string/nameofCat"
+                            android:textColor="@color/_black"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/cat_Age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cat_Name"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_toEndOf="@+id/catName"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="1 year old"
+                            android:textColor="@color/_black"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/catAge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/catName"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/catImg1"
+                            android:fontFamily="@font/quicksand_book"
+                            android:text="@string/catage"
+                            android:textColor="@color/_black"
+                            android:textSize="25sp" />
+
+                        <ImageButton
+                            android:layout_width="55dp"
+                            android:layout_height="51dp"
+                            android:layout_alignBottom="@+id/catImg1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="14dp"
+                            android:layout_marginBottom="49dp"
+                            android:background="@android:color/transparent"
+                            android:contentDescription="@string/no_heart"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/no_heart" />
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
 
             <!-- Toolbar
             <androidx.appcompat.widget.Toolbar
