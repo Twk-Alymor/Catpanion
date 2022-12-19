@@ -27,4 +27,13 @@
     <string name="nameofCat">Name:</string>
     <string name="catage">Age:</string>
     <string name="no_heart">No heart</string>
+    <string name="quicksurvey">Quick Survey!</string>
+    <string name="quicksurvey_ins">Please be honest with all of your answers.</string>
+    <string name="qs1">Are you over 18 years old?</string>
+    <string name="qs2">Are you willing to do trainings on how to take more care of the cats?</string>
+    <string name="qs3">Does your house/ apartment/ condo allow having pets?</string>
+    <string name="c_passqs">Congrats!</string>
+    <string name="m2">You meet all the basic requirements needed.
+
+You can now proceed to look for pets you wanted to adopt.</string>
 </resources>
