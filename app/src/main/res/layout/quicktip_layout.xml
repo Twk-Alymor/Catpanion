@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp"
+    android:padding="20dp"
+    android:id="@+id/layoutQuickTipContainer">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutQuickTip"
+        android:background="@drawable/quick_tip_bg"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/quickTipTitle"
+            android:padding="10dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:textColor="@color/_beige"
+            android:textSize="22sp"
+            android:text="@string/did_you_know"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/quickTipMessage"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/quicksand_book"
+            android:textColor="@color/_beige"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:lineSpacingExtra="8sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quickTipTitle"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/quickTipAction"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/custom_button2"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Close"
+        android:textColor="@color/_beige"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/layoutQuickTip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutQuickTip" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,12 +14,20 @@
 
         <!-- Customize your theme here. -->
 
-
     </style>
 
+
+    <!-- Text Style -->
     <style name="TextStyle" parent="@android:style/TextAppearance">
         <item name="android:fontFamily">@font/quicksand_book</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">@color/_black</item>
     </style>
+
+    <!-- Quick Tip Dialog -->
+    <style name="QuickTip_Theme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+
 </resources>

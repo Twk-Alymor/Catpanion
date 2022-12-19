@@ -190,6 +190,7 @@
                         android:layout_alignParentEnd="true"
                         android:background="@android:color/transparent"
                         android:contentDescription="@string/no_heart"
+                        android:onClick="hearted"
                         android:scaleType="centerCrop"
                         android:src="@drawable/no_heart"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -198,8 +199,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.141"
-                        android:onClick="hearted"
-                        />
+                        tools:ignore="DuplicateSpeakableTextCheck" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -249,7 +249,7 @@
                         android:layout_marginBottom="26dp"
                         android:layout_toEndOf="@+id/catName2"
                         android:fontFamily="@font/quicksand_bold"
-                        android:text="Nero"
+                        android:text="@string/catName2"
                         android:textColor="@color/_black"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toTopOf="@+id/cat_Age2"
@@ -287,7 +287,7 @@
                         android:layout_marginBottom="48dp"
                         android:layout_toEndOf="@+id/catName2"
                         android:fontFamily="@font/quicksand_bold"
-                        android:text="1 month"
+                        android:text="@string/catAge2"
                         android:textColor="@color/_black"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toBottomOf="parent"
