@@ -73,145 +73,279 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
             android:background="@color/_black"
-            tools:context=".Home">
+            android:gravity="center"
+            tools:context=".Home"
+            android:orientation="vertical">
             <!-- Card #1 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
-                app:cardElevation="3dp"
                 app:cardCornerRadius="11dp"
-                app:cardUseCompatPadding="true" >
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true">
                 <!-- Inside Card #1 -->
-                <RelativeLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="start|center"
                     android:background="@color/_darkBeige">
                     <!-- Picture -->
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/catImg1"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:layout_marginStart="10dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/cat1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.023"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/Circular"
-                        app:strokeWidth="5dp"
                         app:strokeColor="@color/_black"
-                        />
-
-
+                        app:strokeWidth="5dp" />
 
                     <!-- Details -->
-
                     <TextView
                         android:id="@+id/cat_Name"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="23dp"
                         android:layout_alignParentTop="true"
-                        android:layout_marginStart="21dp"
-                        android:layout_marginTop="26dp"
+                        android:layout_marginTop="42dp"
+                        android:layout_marginEnd="58dp"
+                        android:layout_marginBottom="26dp"
                         android:layout_toEndOf="@+id/catName"
                         android:fontFamily="@font/quicksand_bold"
-                        android:text="Popoy"
+                        android:text="@string/CatName1"
                         android:textColor="@color/_black"
-                        android:textSize="25sp" />
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@+id/cat_Age"
+                        app:layout_constraintEnd_toStartOf="@+id/heartButton"
+                        app:layout_constraintStart_toEndOf="@+id/catName"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
 
                     <TextView
                         android:id="@+id/catName"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="64dp"
+                        android:layout_height="23dp"
                         android:layout_alignParentTop="true"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginTop="26dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="44dp"
+                        android:layout_marginEnd="22dp"
+                        android:layout_marginBottom="26dp"
                         android:layout_toEndOf="@+id/catImg1"
                         android:fontFamily="@font/quicksand_book"
                         android:text="@string/nameofCat"
                         android:textColor="@color/_black"
-                        android:textSize="25sp" />
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@+id/catAge"
+                        app:layout_constraintEnd_toStartOf="@+id/cat_Name"
+                        app:layout_constraintStart_toEndOf="@+id/catImg1"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/cat_Age"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="23dp"
                         android:layout_below="@+id/cat_Name"
-                        android:layout_marginStart="7dp"
-                        android:layout_marginTop="6dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="111dp"
+                        android:layout_marginBottom="48dp"
                         android:layout_toEndOf="@+id/catName"
                         android:fontFamily="@font/quicksand_bold"
-                        android:text="1 year old"
+                        android:text="@string/CatAge1"
                         android:textColor="@color/_black"
-                        android:textSize="25sp" />
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/catAge"
+                        app:layout_constraintTop_toBottomOf="@+id/cat_Name" />
 
                     <TextView
                         android:id="@+id/catAge"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_height="23dp"
                         android:layout_below="@+id/catName"
-                        android:layout_marginStart="25dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="50dp"
                         android:layout_toEndOf="@+id/catImg1"
                         android:fontFamily="@font/quicksand_book"
                         android:text="@string/catage"
                         android:textColor="@color/_black"
-                        android:textSize="25sp" />
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/cat_Age"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/catImg1"
+                        app:layout_constraintTop_toBottomOf="@+id/catName" />
 
                     <ImageButton
+                        android:id="@+id/heartButton"
                         android:layout_width="55dp"
                         android:layout_height="51dp"
                         android:layout_alignBottom="@+id/catImg1"
                         android:layout_alignParentEnd="true"
-                        android:layout_marginEnd="14dp"
-                        android:layout_marginBottom="49dp"
                         android:background="@android:color/transparent"
                         android:contentDescription="@string/no_heart"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/no_heart" />
+                        android:src="@drawable/no_heart"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.953"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.141"
+                        android:onClick="hearted"
+                        />
 
 
-                </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- END CARD #1 -->
+
+
+
+            <!-- Card #2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:cardCornerRadius="11dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true">
+
+                <!-- Inside Card #2 -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/_darkBeige">
+                    <!-- Picture -->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/catImg2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cat2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.023"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/Circular"
+                        app:strokeColor="@color/_black"
+                        app:strokeWidth="5dp" />
+
+                    <!-- Details -->
+                    <TextView
+                        android:id="@+id/cat_Name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="42dp"
+                        android:layout_marginEnd="58dp"
+                        android:layout_marginBottom="26dp"
+                        android:layout_toEndOf="@+id/catName2"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="Nero"
+                        android:textColor="@color/_black"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@+id/cat_Age2"
+                        app:layout_constraintEnd_toStartOf="@+id/heartButton2"
+                        app:layout_constraintStart_toEndOf="@+id/catName2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/catName2"
+                        android:layout_width="64dp"
+                        android:layout_height="23dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="44dp"
+                        android:layout_marginEnd="22dp"
+                        android:layout_marginBottom="26dp"
+                        android:layout_toEndOf="@+id/catImg2"
+                        android:fontFamily="@font/quicksand_book"
+                        android:text="@string/nameofCat"
+                        android:textColor="@color/_black"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@+id/catAge2"
+                        app:layout_constraintEnd_toStartOf="@+id/cat_Name2"
+                        app:layout_constraintStart_toEndOf="@+id/catImg2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/cat_Age2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"
+                        android:layout_below="@+id/cat_Name2"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="111dp"
+                        android:layout_marginBottom="48dp"
+                        android:layout_toEndOf="@+id/catName2"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="1 month"
+                        android:textColor="@color/_black"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/catAge2"
+                        app:layout_constraintTop_toBottomOf="@+id/cat_Name2" />
+
+                    <TextView
+                        android:id="@+id/catAge2"
+                        android:layout_width="0dp"
+                        android:layout_height="23dp"
+                        android:layout_below="@+id/catName2"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="50dp"
+                        android:layout_toEndOf="@+id/catImg2"
+                        android:fontFamily="@font/quicksand_book"
+                        android:text="@string/catage"
+                        android:textColor="@color/_black"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/cat_Age2"
+                        app:layout_constraintHorizontal_bias="0.866"
+                        app:layout_constraintStart_toEndOf="@+id/catImg2"
+                        app:layout_constraintTop_toBottomOf="@+id/catName2" />
+
+                    <ImageButton
+                        android:id="@+id/heartButton2"
+                        android:layout_width="55dp"
+                        android:layout_height="51dp"
+                        android:layout_alignBottom="@+id/catImg2"
+                        android:layout_alignParentEnd="true"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/no_heart"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/no_heart"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.953"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.141" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
 
 
 
-            <!-- Toolbar
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="@color/_beige">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal" />
-
-            </androidx.appcompat.widget.Toolbar>
-        -->
-            <!-- Toolbar
-            <com.google.android.material.appbar.AppBarLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.appbar.MaterialToolbar
-                    android:id="@+id/topBar"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    app:menu="@menu/toolbar_menu">
-
-                </com.google.android.material.appbar.MaterialToolbar>
-
-            </com.google.android.material.appbar.AppBarLayout>
-
-            -->
+            <!-- Card #3 -->
 
 
-        </LinearLayout>
 
-    </androidx.core.widget.NestedScrollView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
