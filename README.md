@@ -16,6 +16,8 @@ Android 12L **Sv2**
 
 ## FIREBASE
 
+https://console.firebase.google.com/u/1/project/catpanion-9ee0a/overview
+
 **Project ID:** catpanion-9ee0a
 
 **Project Number:** 861737061414

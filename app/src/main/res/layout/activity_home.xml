@@ -11,27 +11,6 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
     tools:context=".Home">
-        <!-- Drawer -->
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/nav_view"
-        android:layout_gravity="start"
-        android:background="@color/_black"
-        app:headerLayout="@layout/nav_layout"
-        app:menu="@menu/nav_menu"
-        app:itemIconTint="@color/_black"
-        app:itemTextColor="@color/_black"
-        app:itemBackground="@color/_beige">
-
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="bottom|center"
-            android:layout_margin="20dp"
-            android:src="@drawable/catpanion_logo_transparent" />
-
-    </com.google.android.material.navigation.NavigationView>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
     android:layout_width="match_parent"
@@ -384,4 +363,26 @@
 
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"
+        android:background="@color/_black"
+        app:headerLayout="@layout/nav_layout"
+        app:menu="@menu/nav_menu"
+        app:itemIconTint="@color/_black"
+        app:itemTextColor="@color/_black"
+        app:itemBackground="@color/_beige">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom|center"
+            android:layout_margin="20dp"
+            android:src="@drawable/catpanion_logo_transparent" />
+
+    </com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>
