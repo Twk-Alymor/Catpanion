@@ -1,5 +1,8 @@
 plugins {
     id 'com.android.application'
+
+    // Add the Google services Gradle plugin
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -38,7 +41,20 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
     implementation 'androidx.compose.material3:material3:1.0.1'
 
-    // Dependency for Circular Image
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+
+    // TODO: Add the dependencies for Firebase products you want to use
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics'
+
+
+    /*
+    *
+    * FIREBASE DETAILS
+    * https://console.firebase.google.com/u/1/project/catpanion-9ee0a/overview
+    *
+    * */
 
 
 }

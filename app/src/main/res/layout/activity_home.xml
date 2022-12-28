@@ -18,7 +18,6 @@
         android:id="@+id/nav_view"
         android:layout_gravity="start"
         android:background="@color/_black"
-        android:actionButtonStyle="@style/ActionButton_test"
         app:headerLayout="@layout/nav_layout"
         app:menu="@menu/nav_menu"
         app:itemIconTint="@color/_black"
