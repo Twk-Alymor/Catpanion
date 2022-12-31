@@ -276,7 +276,51 @@
         android:background="@color/_beige"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-6dp"
-        tools:layout_editor_absoluteY="582dp"/>
+        tools:layout_editor_absoluteY="582dp">
+
+        <ImageButton
+            android:id="@+id/PlacesImage"
+            android:layout_width="50dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="40dp"
+            android:background="@color/_beige"
+            android:layout_gravity="end"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_baseline_house_24" />
+
+        <ImageButton
+            android:id="@+id/Search"
+            android:layout_width="50dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="50dp"
+            android:background="@color/_beige"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_baseline_search_24"
+            tools:ignore="DuplicateIds" />
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="50dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="140dp"
+            android:background="@color/_beige"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_baseline_favorite_24" />
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="50dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="235dp"
+            android:background="@color/_beige"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_baseline_message_24" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <TableLayout
         android:layout_width="264dp"
@@ -284,11 +328,7 @@
         android:background="@drawable/textborder"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="224dp">
-
-        <TableRow
-            android:layout_width="283dp"
-            android:layout_height="15dp" />
+        tools:layout_editor_absoluteY="208dp">
 
         <TableRow
             android:layout_width="match_parent"
