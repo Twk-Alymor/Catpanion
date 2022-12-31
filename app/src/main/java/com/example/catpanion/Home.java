@@ -9,6 +9,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -21,6 +22,8 @@ import android.widget.Toast;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import org.jetbrains.annotations.NonNls;
 
@@ -28,11 +31,14 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     private DrawerLayout drawerLayout;
     ImageButton heartBTN;
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        firebaseAuth = FirebaseAuth.getInstance();
 
         // QUICK TIPS
         findViewById(R.id.quicktipsImagebtn).setOnClickListener(new View.OnClickListener() {
@@ -96,12 +102,33 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 break;
 
             case R.id.nav_logout:
+                firebaseAuth.signOut();
                 Toast.makeText(this, "User signed out!", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(Home.this, MainActivity.class);
+                startActivity(i);
                 break;
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    // LOGOUT
+    public void logout(View v){
+
+        finish();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user == null){
+            Intent i = new Intent(Home.this, MainActivity.class);
+            startActivity(i);
+            finish();
+        }
     }
 
     @Override
