@@ -168,8 +168,6 @@
                 android:text="Places" />
 
 
-
-
         </com.google.android.material.bottomnavigation.BottomNavigationView>
 
         <EditText
@@ -220,8 +218,8 @@
             android:background="@drawable/background_beige"
             app:srcCompat="@drawable/ic_baseline_add_24"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="325dp"
-            tools:layout_editor_absoluteY="500dp" />
+            tools:layout_editor_absoluteX="329dp"
+            tools:layout_editor_absoluteY="505dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
