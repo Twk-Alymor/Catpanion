@@ -180,6 +180,18 @@
             tools:layout_editor_absoluteX="329dp"
             tools:layout_editor_absoluteY="512dp" />
 
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="109dp"
+            android:layout_height="24dp"
+            android:background="#8C8879"
+            android:text="M O R E"
+            android:textColor="@color/_beige"
+            android:fontFamily="@font/quicksand_bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="196dp"
+            tools:layout_editor_absoluteY="255dp" />
+
         <TextView
             android:id="@+id/Favorites"
             android:layout_width="wrap_content"
@@ -203,15 +215,17 @@
         </TableLayout>
 
         <TableLayout
-            android:layout_width="173dp"
-            android:layout_height="58dp"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
             android:background="@drawable/boderr_brown"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="137dp"
-            tools:layout_editor_absoluteY="204dp">
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="190dp">
 
 
         </TableLayout>
+
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
