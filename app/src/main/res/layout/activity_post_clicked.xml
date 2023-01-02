@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:layout_editor_absolute_X="1dp"
+    tools:layout_editor_absolute_Y="1dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/_black"
     android:fitsSystemWindows="true"
     tools:context=".Home"
@@ -74,202 +81,17 @@
         tools:layout_editor_absoluteY="92dp" />
 
     <TextView
-        android:id="@+id/catName"
-        android:layout_width="104dp"
-        android:layout_height="24dp"
+        android:id="@+id/FelV_Vac"
+        android:layout_width="105dp"
+        android:layout_height="37dp"
         android:background="@color/_beige"
-        android:paddingTop="3dp"
         android:fontFamily="@font/quicksand_bold"
-        android:text="Name:"
+        android:paddingTop="3dp"
+        android:text="FeLV Vaccine: "
         android:textAlignment="center"
         tools:ignore="InvalidId,MissingConstraints"
         tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="239dp" />
-
-    <TextView
-        android:id="@+id/Age"
-        android:layout_width="104dp"
-        android:layout_height="24dp"
-        android:background="@color/_beige"
-        android:paddingTop="3dp"
-        android:fontFamily="@font/quicksand_bold"
-        android:text="Age: "
-        android:textAlignment="center"
-        tools:ignore="InvalidId,MissingConstraints"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="279dp" />
-
-    <TextView
-        android:id="@+id/Gend"
-        android:layout_width="104dp"
-        android:layout_height="24dp"
-        android:background="@color/_beige"
-        android:paddingTop="3dp"
-        android:fontFamily="@font/quicksand_bold"
-        android:text="Gender:"
-        android:textAlignment="center"
-        tools:ignore="InvalidId,MissingConstraints"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="317dp" />
-
-    <TextView
-        android:id="@+id/Loc"
-        android:layout_width="104dp"
-        android:layout_height="24dp"
-        android:background="@color/_beige"
-        android:fontFamily="@font/quicksand_bold"
-        android:paddingTop="3dp"
-        android:text="Location"
-        android:textAlignment="center"
-        tools:ignore="InvalidId,MissingConstraints"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="353dp" />
-
-    <TextView
-        android:id="@+id/coat"
-        android:layout_width="102dp"
-        android:layout_height="41dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/_beige"
-        android:fontFamily="@font/quicksand_bold"
-        android:paddingTop="3dp"
-        android:text="Coat color and pattern"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/loc2"
-        tools:ignore="InvalidId,MissingConstraints"
-        tools:layout_editor_absoluteX="92dp" />
-
-    <TextView
-        android:id="@+id/loc2"
-        android:layout_width="104dp"
-        android:layout_height="41dp"
-        android:background="@color/_beige"
-        android:fontFamily="@font/quicksand_bold"
-        android:paddingTop="3dp"
-        android:text="Spayed/Neutered?"
-        android:textAlignment="center"
-        tools:ignore="InvalidId,MissingConstraints"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="450dp" />
-
-    <TextView
-        android:id="@+id/loc3"
-        android:layout_width="104dp"
-        android:layout_height="40dp"
-        android:background="@color/_beige"
-        android:fontFamily="@font/quicksand_bold"
-        android:paddingTop="3dp"
-        android:text="Ravies Vaccine: "
-        android:textAlignment="center"
-        tools:ignore="InvalidId,MissingConstraints"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="505dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="102dp"
-        android:layout_height="25dp"
-        android:width="10dip"
-        android:background="@drawable/textborder"
-        android:fontFamily="@font/quicksand_bold"
-        android:paddingTop="3dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="@color/_beige"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="217dp"
-        tools:layout_editor_absoluteY="239dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="102dp"
-        android:layout_height="25dp"
-        android:width="10dip"
-        android:background="@drawable/textborder"
-        android:fontFamily="@font/quicksand_bold"
-        android:paddingTop="3dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="@color/_beige"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="217dp"
-        tools:layout_editor_absoluteY="279dp" />
-
-    <TextView
-        android:id="@+id/gend"
-        android:layout_width="102dp"
-        android:layout_height="25dp"
-        android:width="10dip"
-        android:background="@drawable/textborder"
-        android:fontFamily="@font/quicksand_bold"
-        android:paddingTop="3dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="@color/_beige"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="217dp"
-        tools:layout_editor_absoluteY="316dp" />
-
-    <TextView
-        android:id="@+id/text_vaccine"
-        android:layout_width="102dp"
-        android:layout_height="40dp"
-        android:width="10dip"
-        android:background="@drawable/textborder"
-        android:fontFamily="@font/quicksand_bold"
-        android:paddingTop="3dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="@color/_beige"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="217dp"
-        tools:layout_editor_absoluteY="505dp" />
-
-    <TextView
-        android:id="@+id/text_spayed"
-        android:layout_width="102dp"
-        android:layout_height="38dp"
-        android:width="10dip"
-        android:background="@drawable/textborder"
-        android:fontFamily="@font/quicksand_bold"
-        android:paddingTop="3dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="@color/_beige"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="217dp"
-        tools:layout_editor_absoluteY="450dp" />
-
-    <TextView
-        android:id="@+id/text_coatColor"
-        android:layout_width="102dp"
-        android:layout_height="42dp"
-        android:width="10dip"
-        android:background="@drawable/textborder"
-        android:fontFamily="@font/quicksand_bold"
-        android:paddingTop="3dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="@color/_beige"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="217dp"
-        tools:layout_editor_absoluteY="393dp" />
-
-    <TextView
-        android:id="@+id/T_loc"
-        android:layout_width="102dp"
-        android:layout_height="25dp"
-        android:width="10dip"
-        android:background="@drawable/textborder"
-        android:fontFamily="@font/quicksand_bold"
-        android:paddingTop="3dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="@color/_beige"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="217dp"
-        tools:layout_editor_absoluteY="353dp" />
-
+        tools:layout_editor_absoluteY="605dp" />
 
     <!-->BOTTOM  NAVIGATION START <!-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -284,10 +106,11 @@
             android:id="@+id/PlacesImage"
             android:layout_width="50dp"
             android:layout_height="49dp"
+            android:layout_gravity="end"
             android:layout_marginTop="10dp"
             android:layout_marginRight="35dp"
             android:background="@color/_beige"
-            android:layout_gravity="end"
+            android:contentDescription="@string/HomeButton"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/ic_baseline_house_24" />
 
@@ -298,6 +121,7 @@
             android:layout_marginTop="13dp"
             android:layout_marginLeft="50dp"
             android:background="@color/_beige"
+            android:contentDescription="@string/Search"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/ic_baseline_search_24"
             tools:ignore="DuplicateIds" />
@@ -305,23 +129,25 @@
         <ImageButton
             android:id="@+id/FavoritesButton"
             android:layout_width="50dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="13dp"
+            android:layout_height="48dp"
             android:layout_marginLeft="140dp"
+            android:layout_marginTop="13dp"
             android:background="@color/_beige"
+            android:contentDescription="@string/FavoritesButton"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/ic_baseline_favorite_24" />
 
         <ImageButton
             android:id="@+id/MessageButton"
-            android:text="@string/Message"
             android:layout_width="50dp"
             android:layout_height="49dp"
-            android:layout_marginTop="13dp"
             android:layout_marginLeft="235dp"
+            android:layout_marginTop="13dp"
             android:layout_marginBottom="20dp"
             android:background="@color/_beige"
+            android:contentDescription="@string/Places"
             android:scaleType="centerCrop"
+            android:text="@string/Message"
             app:srcCompat="@drawable/ic_baseline_message_24" />
 
         <TextView
@@ -364,14 +190,28 @@
     <!-->BOTTOM  NAVIGATION END <!-->
 
 
+    <TextView
+        android:id="@+id/t_loc2"
+        android:layout_width="105dp"
+        android:layout_height="36dp"
+        android:width="10dip"
+        android:background="@drawable/textborder"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="3dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/_beige"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="605dp" />
 
     <TableLayout
-        android:layout_width="264dp"
-        android:layout_height="457dp"
+        android:layout_width="247dp"
+        android:layout_height="455dp"
         android:background="@drawable/textborder"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="208dp">
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="185dp">
 
         <TableRow
             android:layout_width="match_parent"
@@ -387,5 +227,231 @@
 
     </TableLayout>
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="102dp"
+        android:layout_height="25dp"
+        android:width="10dip"
+        android:background="@drawable/textborder"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="3dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/_beige"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="232dp" />
+
+    <TextView
+        android:id="@+id/RaviesVac"
+        android:layout_width="104dp"
+        android:layout_height="40dp"
+        android:background="@color/_beige"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="3dp"
+        android:text="Ravies Vaccine: "
+        android:textAlignment="center"
+        tools:ignore="InvalidId,MissingConstraints"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="459dp" />
+
+    <TextView
+        android:id="@+id/gend"
+        android:layout_width="102dp"
+        android:layout_height="25dp"
+        android:width="10dip"
+        android:background="@drawable/textborder"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="3dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/_beige"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="270dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="102dp"
+        android:layout_height="25dp"
+        android:width="10dip"
+        android:background="@drawable/textborder"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="3dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/_beige"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <TextView
+        android:id="@+id/FVCP_Vac"
+        android:layout_width="105dp"
+        android:layout_height="37dp"
+        android:background="@color/_beige"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="3dp"
+        android:text="FVRCP Vaccine: "
+        android:textAlignment="center"
+        tools:ignore="InvalidId,MissingConstraints"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="518dp" />
+
+    <TextView
+        android:id="@+id/Gend"
+        android:layout_width="104dp"
+        android:layout_height="24dp"
+        android:background="@color/_beige"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="3dp"
+        android:text="Gender:"
+        android:textAlignment="center"
+        tools:ignore="InvalidId,MissingConstraints"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="270dp" />
+
+    <TextView
+        android:id="@+id/text_coatColor"
+        android:layout_width="102dp"
+        android:layout_height="42dp"
+        android:width="10dip"
+        android:background="@drawable/textborder"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="3dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/_beige"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="347dp" />
+
+    <TextView
+        android:id="@+id/Spayed"
+        android:layout_width="104dp"
+        android:layout_height="41dp"
+        android:background="@color/_beige"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="3dp"
+        android:text="Spayed/Neutered?"
+        android:textAlignment="center"
+        tools:ignore="InvalidId,MissingConstraints"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="403dp" />
+
+    <TextView
+        android:id="@+id/Loc"
+        android:layout_width="104dp"
+        android:layout_height="24dp"
+        android:background="@color/_beige"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="3dp"
+        android:text="Location"
+        android:textAlignment="center"
+        tools:ignore="InvalidId,MissingConstraints"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="307dp" />
+
+    <TextView
+        android:id="@+id/T_loc"
+        android:layout_width="102dp"
+        android:layout_height="25dp"
+        android:width="10dip"
+        android:background="@drawable/textborder"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="3dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/_beige"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="310dp" />
+
+    <TextView
+        android:id="@+id/coat"
+        android:layout_width="102dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/_beige"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="3dp"
+        android:text="Coat color and pattern"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/Spayed"
+        tools:ignore="InvalidId,MissingConstraints"
+        tools:layout_editor_absoluteX="92dp" />
+
+    <TextView
+        android:id="@+id/text_vaccine"
+        android:layout_width="102dp"
+        android:layout_height="40dp"
+        android:width="10dip"
+        android:background="@drawable/textborder"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="3dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/_beige"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="459dp" />
+
+    <TextView
+        android:id="@+id/Age"
+        android:layout_width="104dp"
+        android:layout_height="24dp"
+        android:background="@color/_beige"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="3dp"
+        android:text="Age: "
+        android:textAlignment="center"
+        tools:ignore="InvalidId,MissingConstraints"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="232dp" />
+
+    <TextView
+        android:id="@+id/text_spayed"
+        android:layout_width="102dp"
+        android:layout_height="38dp"
+        android:width="10dip"
+        android:background="@drawable/textborder"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="3dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/_beige"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="406dp" />
+
+    <TextView
+        android:id="@+id/catName"
+        android:layout_width="104dp"
+        android:layout_height="24dp"
+        android:background="@color/_beige"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="3dp"
+        android:text="Name:"
+        android:textAlignment="center"
+        tools:ignore="InvalidId,MissingConstraints"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <TextView
+        android:id="@+id/t_loc"
+        android:layout_width="102dp"
+        android:layout_height="36dp"
+        android:width="10dip"
+        android:background="@drawable/textborder"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="3dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/_beige"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="518dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>

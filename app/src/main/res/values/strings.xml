@@ -52,4 +52,8 @@ You can now proceed to look for pets you wanted to adopt.</string>
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>
     <string name="Message">Messages</string>
+    <string name="HomeButton">Home</string>
+    <string name="Search">SearchButton</string>
+    <string name="Places">TextPlaces</string>
+    <string name="FavoritesButton">Favorites</string>
 </resources>
