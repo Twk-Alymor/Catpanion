@@ -221,7 +221,7 @@
             app:srcCompat="@drawable/ic_baseline_add_24"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="325dp"
-            tools:layout_editor_absoluteY="484dp" />
+            tools:layout_editor_absoluteY="500dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
