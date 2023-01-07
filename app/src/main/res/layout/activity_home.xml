@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/_black"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start"
-    tools:context=".Home">
+    tools:context=".Home"
+    tools:openDrawer="start">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/_black">
-
-    <!-- App Bar -->
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="72dp">
+        android:layout_height="match_parent"
+        android:background="@color/_black">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
+        <!-- App Bar -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
             android:layout_width="match_parent"
-            android:layout_height="74dp"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
+            android:layout_height="72dp">
 
-            app:toolbarId="@+id/toolbar">
-
-            <ImageView
-                android:id="@+id/app_bar_image"
-                android:layout_width="81dp"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:layout_gravity="center"
-                android:src="@drawable/catpanion_logo"
-                android:contentDescription="@string/desc_catpanionlogo"
-                app:layout_collapseMode="parallax" />
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
+            <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <!-- User
+                android:layout_height="74dp"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
+
+                app:toolbarId="@+id/toolbar">
+
+                <ImageView
+                    android:id="@+id/app_bar_image"
+                    android:layout_width="81dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/desc_catpanionlogo"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/catpanion_logo"
+                    app:layout_collapseMode="parallax"
+                    tools:ignore="ImageContrastCheck" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <!-- User
             <ImageButton
                 android:id="@+id/userImagebtn"
                 android:layout_width="65dp"
@@ -56,332 +56,324 @@
                 android:background="@color/_beige"
                 android:contentDescription="@string/desc_userlogo"
                 app:srcCompat="@drawable/ic_person" />-->
-            <!-- Quick Tips -->
-            <ImageButton
-                android:id="@+id/quicktipsImagebtn"
-                android:layout_width="53dp"
-                android:layout_height="52dp"
-                android:layout_gravity="end"
-                android:layout_margin="10dp"
-                android:background="@color/_beige"
-                android:scaleType="centerCrop"
-                android:contentDescription="@string/desc_quick_tips"
-                app:srcCompat="@drawable/ic_tips_and_updates" />
+                <!-- Quick Tips -->
+                <ImageButton
+                    android:id="@+id/quicktipsImagebtn"
+                    android:layout_width="53dp"
+                    android:layout_height="52dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="10dp"
+                    android:background="@color/_beige"
+                    android:contentDescription="@string/desc_quick_tips"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_tips_and_updates"
+                    tools:ignore="ImageContrastCheck" />
 
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="@string/desc_catpanionlogo"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
-        <!-- End of App Bar -->
 
-        <!-- CardView Container -->
-        <LinearLayout
+        <FrameLayout
+            android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/_black"
-            android:gravity="center"
-            tools:context=".Home"
-            android:orientation="vertical">
-            <!-- Card #1 -->
-            <androidx.cardview.widget.CardView
+            android:layout_marginTop="72dp"/>
+
+        <!--
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="72dp">
+            <!- CardView Container
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                app:cardCornerRadius="11dp"
-                app:cardElevation="3dp"
-                app:cardUseCompatPadding="true">
-                <!-- Inside Card #1 -->
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/linearLayout3"
+                android:layout_height="match_parent"
+                android:background="@color/_black"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:context=".Home">
+                <!- Card #1
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/_darkBeige">
-                    <!-- Picture -->
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/catImg1"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/cat1"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.023"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:shapeAppearanceOverlay="@style/Circular"
-                        app:strokeColor="@color/_black"
-                        app:strokeWidth="5dp" />
+                    android:layout_height="140dp"
+                    app:cardCornerRadius="11dp"
+                    app:cardElevation="3dp"
+                    app:cardUseCompatPadding="true">
+                    <!- Inside Card #1
+                    <TableLayout
+                        android:id="@+id/tableLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/_darkBeige">
+                        <!- Picture
+                        <TableRow android:layout_margin="10dp">
 
-                    <!-- Details -->
-                    <TextView
-                        android:id="@+id/cat_Name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="23dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginTop="42dp"
-                        android:layout_marginEnd="58dp"
-                        android:layout_marginBottom="26dp"
-                        android:layout_toEndOf="@+id/catName"
-                        android:fontFamily="@font/quicksand_bold"
-                        android:text="@string/CatName1"
-                        android:textColor="@color/_black"
-                        android:textSize="20sp"
-                        app:layout_constraintBottom_toTopOf="@+id/cat_Age"
-                        app:layout_constraintEnd_toStartOf="@+id/heartButton"
-                        app:layout_constraintStart_toEndOf="@+id/catName"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="1.0" />
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/catImg1"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center_vertical"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/cat1"
+                                app:shapeAppearanceOverlay="@style/Circular"
+                                app:strokeColor="@color/_black"
+                                app:strokeWidth="5dp"
+                                tools:ignore="ImageContrastCheck" />
 
-                    <TextView
-                        android:id="@+id/catName"
-                        android:layout_width="64dp"
-                        android:layout_height="23dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginStart="13dp"
-                        android:layout_marginTop="44dp"
-                        android:layout_marginEnd="22dp"
-                        android:layout_marginBottom="26dp"
-                        android:layout_toEndOf="@+id/catImg1"
-                        android:fontFamily="@font/quicksand_book"
-                        android:text="@string/nameofCat"
-                        android:textColor="@color/_black"
-                        android:textSize="20sp"
-                        app:layout_constraintBottom_toTopOf="@+id/catAge"
-                        app:layout_constraintEnd_toStartOf="@+id/cat_Name"
-                        app:layout_constraintStart_toEndOf="@+id/catImg1"
-                        app:layout_constraintTop_toTopOf="parent" />
+                            <!- Details
+                            <TableLayout
+                                android:id="@+id/tableLayout_details"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="2">
 
-                    <TextView
-                        android:id="@+id/cat_Age"
-                        android:layout_width="wrap_content"
-                        android:layout_height="23dp"
-                        android:layout_below="@+id/cat_Name"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="111dp"
-                        android:layout_marginBottom="48dp"
-                        android:layout_toEndOf="@+id/catName"
-                        android:fontFamily="@font/quicksand_bold"
-                        android:text="@string/CatAge1"
-                        android:textColor="@color/_black"
-                        android:textSize="20sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/catAge"
-                        app:layout_constraintTop_toBottomOf="@+id/cat_Name" />
+                                <TableRow>
 
-                    <TextView
-                        android:id="@+id/catAge"
-                        android:layout_width="0dp"
-                        android:layout_height="23dp"
-                        android:layout_below="@+id/catName"
-                        android:layout_marginStart="21dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="50dp"
-                        android:layout_toEndOf="@+id/catImg1"
-                        android:fontFamily="@font/quicksand_book"
-                        android:text="@string/catage"
-                        android:textColor="@color/_black"
-                        android:textSize="20sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/cat_Age"
-                        app:layout_constraintHorizontal_bias="1.0"
-                        app:layout_constraintStart_toEndOf="@+id/catImg1"
-                        app:layout_constraintTop_toBottomOf="@+id/catName" />
+                                    <TextView
+                                        android:id="@+id/catName"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/quicksand_book"
+                                        android:text="@string/nameofCat"
+                                        android:textColor="@color/_black"
+                                        android:textSize="15sp"
+                                        tools:ignore="TextContrastCheck" />
 
-                    <ImageButton
-                        android:id="@+id/heartButton"
-                        android:layout_width="55dp"
-                        android:layout_height="51dp"
-                        android:layout_alignBottom="@+id/catImg1"
-                        android:layout_alignParentEnd="true"
-                        android:background="@android:color/transparent"
-                        android:contentDescription="@string/no_heart"
-                        android:onClick="hearted"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/no_heart"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.953"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.141"
-                        tools:ignore="DuplicateSpeakableTextCheck" />
+                                    <TextView
+                                        android:id="@+id/cat_Name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_weight="2"
+                                        android:fontFamily="@font/quicksand_bold"
+                                        android:text="@string/CatName1"
+                                        android:textColor="@color/_black"
+                                        android:textSize="15sp"
+                                        tools:ignore="TextContrastCheck" />
+                                </TableRow>
+
+                                <TableRow android:layout_margin="10dp">
+
+                                    <TextView
+                                        android:id="@+id/catAge"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/quicksand_book"
+                                        android:text="@string/catage"
+                                        android:textColor="@color/_black"
+                                        android:textSize="15sp"
+                                        tools:ignore="TextContrastCheck" />
+
+                                    <TextView
+                                        android:id="@+id/cat_Age"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/quicksand_bold"
+                                        android:text="@string/CatAge1"
+                                        android:textColor="@color/_black"
+                                        android:textSize="15sp"
+                                        tools:ignore="TextContrastCheck" />
 
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
-            <!-- END CARD #1 -->
+                                </TableRow>
+                            </TableLayout>
 
 
+                            <ImageButton
+                                android:id="@+id/heartButton"
+                                android:layout_width="45dp"
+                                android:layout_height="41dp"
+                                android:background="@android:color/transparent"
+                                android:contentDescription="@string/no_heart"
+                                android:onClick="hearted"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/no_heart"
+                                tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck,TouchTargetSizeCheck" />
 
-            <!-- Card #2 -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                app:cardCornerRadius="11dp"
-                app:cardElevation="3dp"
-                app:cardUseCompatPadding="true">
+                        </TableRow>
 
-                <!-- Inside Card #2 -->
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/linearLayout2"
+
+                    </TableLayout>
+                </androidx.cardview.widget.CardView>
+                <!- END CARD #1
+
+
+                <!- Card #2
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/_darkBeige">
-                    <!-- Picture -->
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/catImg2"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/cat2"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.023"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:shapeAppearanceOverlay="@style/Circular"
-                        app:strokeColor="@color/_black"
-                        app:strokeWidth="5dp" />
+                    android:layout_height="140dp"
+                    app:cardCornerRadius="11dp"
+                    app:cardElevation="3dp"
+                    app:cardUseCompatPadding="true">
 
-                    <!-- Details -->
-                    <TextView
-                        android:id="@+id/cat_Name2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="23dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginTop="42dp"
-                        android:layout_marginEnd="58dp"
-                        android:layout_marginBottom="26dp"
-                        android:layout_toEndOf="@+id/catName2"
-                        android:fontFamily="@font/quicksand_bold"
-                        android:text="@string/catName2"
-                        android:textColor="@color/_black"
-                        android:textSize="20sp"
-                        app:layout_constraintBottom_toTopOf="@+id/cat_Age2"
-                        app:layout_constraintEnd_toStartOf="@+id/heartButton2"
-                        app:layout_constraintStart_toEndOf="@+id/catName2"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="1.0" />
+                    <!- Inside Card #2
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/_darkBeige">
+                        <!- Picture
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/catImg2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/cat2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.023"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:shapeAppearanceOverlay="@style/Circular"
+                            app:strokeColor="@color/_black"
+                            app:strokeWidth="5dp"
+                            tools:ignore="ImageContrastCheck" />
 
-                    <TextView
-                        android:id="@+id/catName2"
-                        android:layout_width="64dp"
-                        android:layout_height="23dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginStart="13dp"
-                        android:layout_marginTop="44dp"
-                        android:layout_marginEnd="22dp"
-                        android:layout_marginBottom="26dp"
-                        android:layout_toEndOf="@+id/catImg2"
-                        android:fontFamily="@font/quicksand_book"
-                        android:text="@string/nameofCat"
-                        android:textColor="@color/_black"
-                        android:textSize="20sp"
-                        app:layout_constraintBottom_toTopOf="@+id/catAge2"
-                        app:layout_constraintEnd_toStartOf="@+id/cat_Name2"
-                        app:layout_constraintStart_toEndOf="@+id/catImg2"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        <!- Details
+                        <TextView
+                            android:id="@+id/cat_Name2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="23dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="42dp"
+                            android:layout_marginEnd="58dp"
+                            android:layout_marginBottom="26dp"
+                            android:layout_toEndOf="@+id/catName2"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="@string/catName2"
+                            android:textColor="@color/_black"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toTopOf="@+id/cat_Age2"
+                            app:layout_constraintEnd_toStartOf="@+id/heartButton2"
+                            app:layout_constraintStart_toEndOf="@+id/catName2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="1.0"
+                            tools:ignore="TextContrastCheck" />
 
-                    <TextView
-                        android:id="@+id/cat_Age2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="23dp"
-                        android:layout_below="@+id/cat_Name2"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="111dp"
-                        android:layout_marginBottom="48dp"
-                        android:layout_toEndOf="@+id/catName2"
-                        android:fontFamily="@font/quicksand_bold"
-                        android:text="@string/catAge2"
-                        android:textColor="@color/_black"
-                        android:textSize="20sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/catAge2"
-                        app:layout_constraintTop_toBottomOf="@+id/cat_Name2" />
+                        <TextView
+                            android:id="@+id/catName2"
+                            android:layout_width="64dp"
+                            android:layout_height="23dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="13dp"
+                            android:layout_marginTop="44dp"
+                            android:layout_marginEnd="22dp"
+                            android:layout_marginBottom="26dp"
+                            android:layout_toEndOf="@+id/catImg2"
+                            android:fontFamily="@font/quicksand_book"
+                            android:text="@string/nameofCat"
+                            android:textColor="@color/_black"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toTopOf="@+id/catAge2"
+                            app:layout_constraintEnd_toStartOf="@+id/cat_Name2"
+                            app:layout_constraintStart_toEndOf="@+id/catImg2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="TextContrastCheck" />
 
-                    <TextView
-                        android:id="@+id/catAge2"
-                        android:layout_width="0dp"
-                        android:layout_height="23dp"
-                        android:layout_below="@+id/catName2"
-                        android:layout_marginStart="21dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="50dp"
-                        android:layout_toEndOf="@+id/catImg2"
-                        android:fontFamily="@font/quicksand_book"
-                        android:text="@string/catage"
-                        android:textColor="@color/_black"
-                        android:textSize="20sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/cat_Age2"
-                        app:layout_constraintHorizontal_bias="0.866"
-                        app:layout_constraintStart_toEndOf="@+id/catImg2"
-                        app:layout_constraintTop_toBottomOf="@+id/catName2" />
+                        <TextView
+                            android:id="@+id/cat_Age2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="23dp"
+                            android:layout_below="@+id/cat_Name2"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="111dp"
+                            android:layout_marginBottom="48dp"
+                            android:layout_toEndOf="@+id/catName2"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="@string/catAge2"
+                            android:textColor="@color/_black"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/catAge2"
+                            app:layout_constraintTop_toBottomOf="@+id/cat_Name2"
+                            tools:ignore="TextContrastCheck" />
 
-                    <ImageButton
-                        android:id="@+id/heartButton2"
-                        android:layout_width="55dp"
-                        android:layout_height="51dp"
-                        android:layout_alignBottom="@+id/catImg2"
-                        android:layout_alignParentEnd="true"
-                        android:background="@android:color/transparent"
-                        android:contentDescription="@string/no_heart"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/no_heart"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.953"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.141" />
+                        <TextView
+                            android:id="@+id/catAge2"
+                            android:layout_width="0dp"
+                            android:layout_height="23dp"
+                            android:layout_below="@+id/catName2"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="50dp"
+                            android:layout_toEndOf="@+id/catImg2"
+                            android:fontFamily="@font/quicksand_book"
+                            android:text="@string/catage"
+                            android:textColor="@color/_black"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/cat_Age2"
+                            app:layout_constraintHorizontal_bias="0.866"
+                            app:layout_constraintStart_toEndOf="@+id/catImg2"
+                            app:layout_constraintTop_toBottomOf="@+id/catName2"
+                            tools:ignore="TextContrastCheck" />
+
+                        <ImageButton
+                            android:id="@+id/heartButton2"
+                            android:layout_width="45dp"
+                            android:layout_height="41dp"
+                            android:layout_alignBottom="@+id/catImg2"
+                            android:layout_alignParentEnd="true"
+                            android:background="@android:color/transparent"
+                            android:contentDescription="@string/no_heart"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/no_heart"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.953"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.141"
+                            tools:ignore="ImageContrastCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+                        <FrameLayout
+                            android:id="@+id/fragment_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:layout_editor_absoluteX="7dp"
+                            tools:layout_editor_absoluteY="53dp" />
 
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
 
 
-
-
-            <!-- Card #3 -->
-
+                <!- Card #3
 
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
-
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/fragment_container" />
-
-
+    -->
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <!-- Drawer -->
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/nav_view"
         android:layout_gravity="start"
         android:background="@color/_black"
         app:headerLayout="@layout/nav_layout"
-        app:menu="@menu/nav_menu"
+        app:itemBackground="@color/_beige"
         app:itemIconTint="@color/_black"
         app:itemTextColor="@color/_black"
-        app:itemBackground="@color/_beige">
+        app:menu="@menu/nav_menu">
 
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="bottom|center"
             android:layout_margin="20dp"
+            android:contentDescription="@string/todo"
             android:src="@drawable/catpanion_logo_transparent" />
 
     </com.google.android.material.navigation.NavigationView>

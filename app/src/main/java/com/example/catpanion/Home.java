@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -32,6 +33,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     private DrawerLayout drawerLayout;
     ImageButton heartBTN;
     FirebaseAuth firebaseAuth;
+
+    Fragment home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,13 +65,16 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         toggle.syncState();
 
         if(savedInstanceState == null){
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Profile_Fragment()).commit();
-            navigationView.setCheckedItem(R.id.nav_profile);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home_Fragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_home);
         }
 
 
-        // FOR WIDGETS
+        /** FOR WIDGETS
         heartBTN = (ImageButton) findViewById(R.id.heartButton);
+         **/
+
+        // home = (Fragment) findViewById(R.layout.fragment_home_);
 
     }
 
@@ -79,6 +85,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             case R.id.nav_profile:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new Profile_Fragment()).commit();
+                break;
+
+            case R.id.nav_home:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new Home_Fragment()).commit();
                 break;
 
             case R.id.nav_notifications:
@@ -172,7 +183,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
 
 
-    // HEART AND UNHEART
+/** HEART AND UNHEART **/
     public void hearted (View v){
         if(heartBTN.getDrawable().getConstantState() ==
                 getResources().getDrawable(R.drawable.no_heart).getConstantState()){
@@ -183,4 +194,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         }
 
     }
+
+
+
 }
