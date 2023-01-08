@@ -185,12 +185,12 @@
             android:layout_width="109dp"
             android:layout_height="24dp"
             android:background="#8C8879"
+            android:fontFamily="@font/quicksand_bold"
             android:text="M O R E"
             android:textColor="@color/_beige"
-            android:fontFamily="@font/quicksand_bold"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="196dp"
-            tools:layout_editor_absoluteY="255dp" />
+            tools:layout_editor_absoluteX="187dp"
+            tools:layout_editor_absoluteY="239dp" />
 
         <TextView
             android:id="@+id/Favorites"
@@ -205,27 +205,25 @@
             tools:layout_editor_absoluteY="108dp" />
 
         <TableLayout
-            android:layout_width="380dp"
-            android:layout_height="123dp"
+            android:layout_width="358dp"
+            android:layout_height="118dp"
             android:background="@drawable/section_backgound"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="15dp"
-            tools:layout_editor_absoluteY="161dp">
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="153dp">
 
         </TableLayout>
 
         <TableLayout
             android:layout_width="170dp"
-            android:layout_height="60dp"
+            android:layout_height="52dp"
             android:background="@drawable/boderr_brown"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="161dp"
-            tools:layout_editor_absoluteY="190dp">
+            tools:layout_editor_absoluteX="159dp"
+            tools:layout_editor_absoluteY="177dp">
 
 
         </TableLayout>
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
