@@ -192,13 +192,31 @@
             tools:layout_editor_absoluteX="137dp"
             tools:layout_editor_absoluteY="106dp" />
 
+
         <TableLayout
             android:layout_width="367dp"
             android:layout_height="81dp"
             android:background="@drawable/section_backgound"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="28dp"
-            tools:layout_editor_absoluteY="154dp">
+            tools:layout_editor_absoluteX="22dp"
+            tools:layout_editor_absoluteY="172dp">
+
+            <TextView
+                android:id="@+id/N_message"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/Cont_mess"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="10dp"
+                android:text="Message Content" />
 
         </TableLayout>
 
