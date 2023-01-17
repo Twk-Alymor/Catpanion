@@ -9,6 +9,8 @@
     tools:context=".SignUp">
 
     <!-- Logo -->
+
+    <!-- Signup Start -->
     <ImageView
         android:id="@+id/logo"
         android:layout_width="match_parent"
@@ -17,7 +19,6 @@
         android:contentDescription="@string/desc_catpanionlogo"
         app:srcCompat="@drawable/catpanion_logo" />
 
-    <!-- Signup Start -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,6 +28,39 @@
         android:text="@string/signup"
         android:textColor="@color/_black"
         android:textSize="25sp" />
+
+    <!-- Username
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/quicksand_book"
+        android:text="@string/username"
+        android:textColor="@color/_black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editUsername"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:elevation="10dp"
+        android:background="@drawable/custom_textfield"
+        android:fontFamily="@font/quicksand_book"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="10dp"
+        android:paddingStart="10dp"
+        android:hint="@string/username1"
+        android:textColor="@color/_beige"
+        android:textColorHint="@color/_hint_Darkbg"
+        android:inputType="textEmailAddress"
+        android:textSize="20sp"
+        android:layout_marginBottom="15dp"
+        android:autofillHints=""
+        tools:ignore="RtlSymmetry" />
+        -->
+
     <!-- Email -->
     <TextView
         android:layout_width="wrap_content"
@@ -55,7 +89,8 @@
         android:inputType="textEmailAddress"
         android:textSize="20sp"
         android:layout_marginBottom="15dp"
-        android:autofillHints="" />
+        android:autofillHints=""
+        tools:ignore="RtlSymmetry" />
 
     <!-- Password -->
     <TextView
@@ -86,7 +121,10 @@
         android:textColorHint="@color/_hint_Darkbg"
         android:inputType="textPassword"
         android:textSize="20sp"
-        android:autofillHints="" />
+        android:autofillHints=""
+        tools:ignore="RtlSymmetry" />
+
+
 
     <!-- End of Signup Edit Text -->
 

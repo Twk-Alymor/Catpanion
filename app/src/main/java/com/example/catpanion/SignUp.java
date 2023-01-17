@@ -40,7 +40,7 @@ public class SignUp extends AppCompatActivity {
 
     //  GO TO LOGIN ACTIVITY
     public void toLogin(View v){
-        Intent i = new Intent(SignUp.this, MainActivity.class);
+        Intent i = new Intent(SignUp.this, SignUpDetails.class);
         startActivity(i);
     }
 
@@ -73,7 +73,7 @@ public class SignUp extends AppCompatActivity {
 
     //  GO TO SIGNUP DETAILS ACTIVITY [MIGHT CHANGE LATER !!!]
     private void toSignupInfo() {
-        Intent i = new Intent(SignUp.this, Home.class);
+        Intent i = new Intent(SignUp.this, SignUpDetails.class);
         startActivity(i);
         finish();
     }

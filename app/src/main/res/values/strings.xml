@@ -58,4 +58,7 @@ You can now proceed to look for pets you wanted to adopt.</string>
     <string name="FavoritesButton">Favorites</string>
     <string name="todo">TODO</string>
     <string name="home">Home</string>
+    <string name="username">Username:</string>
+    <string name="username1">Username</string>
+    <string name="set_image_of_user">Set image of User</string>
 </resources>

@@ -52,7 +52,7 @@
                     android:background="@color/_beige"
                     android:contentDescription="@string/desc_quick_tips"
                     android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_tips_and_updates" />
+                    android:src="@drawable/ic_tips_and_updates" />
 
                 <ImageButton
                     android:id="@+id/imageButton2"
@@ -62,7 +62,7 @@
                     android:background="@color/_beige"
                     android:contentDescription="@string/appbar_scrolling_view_behavior"
                     android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_person"
+                    android:src="@drawable/ic_person"
                     tools:ignore="TouchTargetSizeCheck" />
 
             </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -93,7 +93,7 @@
                 android:background="@color/_beige"
                 android:contentDescription="@string/HomeButton"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/ic_baseline_house_24" />
+                android:src="@drawable/ic_baseline_house_24" />
 
             <ImageButton
                 android:id="@+id/Search"
@@ -104,7 +104,7 @@
                 android:background="@color/_beige"
                 android:contentDescription="@string/Search"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/ic_baseline_search_24"
+                android:src="@drawable/ic_baseline_search_24"
                 tools:ignore="DuplicateIds" />
 
             <ImageButton
@@ -116,7 +116,7 @@
                 android:background="@color/_beige"
                 android:contentDescription="@string/FavoritesButton"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/ic_baseline_favorite_24" />
+                android:src="@drawable/ic_baseline_favorite_24" />
 
             <ImageButton
                 android:id="@+id/MessageButton"
@@ -129,7 +129,7 @@
                 android:contentDescription="@string/Places"
                 android:scaleType="centerCrop"
                 android:text="@string/Message"
-                app:srcCompat="@drawable/ic_baseline_message_24" />
+                android:src="@drawable/ic_baseline_message_24" />
 
             <TextView
                 android:id="@+id/textView"
@@ -176,7 +176,7 @@
             android:layout_width="66dp"
             android:layout_height="68dp"
             android:background="@drawable/background_beige"
-            app:srcCompat="@drawable/ic_baseline_add_24"
+            android:src="@drawable/ic_baseline_add_24"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="324dp"
             tools:layout_editor_absoluteY="511dp" />
@@ -200,8 +200,8 @@
             android:layout_height="149dp"
             android:background="@drawable/section_backgound"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="19dp"
-            tools:layout_editor_absoluteY="154dp">
+            tools:layout_editor_absoluteX="24dp"
+            tools:layout_editor_absoluteY="153dp">
 
             <TextView
                 android:id="@+id/Place_name"
@@ -226,11 +226,9 @@
                 android:layout_height="45dp"
                 android:layout_marginTop="-35dp"
                 android:layout_marginRight="140dp"
-                android:background=""
                 android:scaleType="centerInside"
-                app:srcCompat="@drawable/location_icon"
-                tools:layout_editor_absoluteX="111dp"
-                tools:layout_editor_absoluteY="432dp" />
+                android:src="@drawable/location_icon" />
+
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="20dp"
@@ -243,19 +241,15 @@
                 android:id="@+id/imageButton4"
                 android:layout_width="50dp"
                 android:layout_height="45dp"
+                android:layout_gravity="left"
                 android:layout_marginTop="-35dp"
                 android:layout_marginRight="140dp"
                 android:layout_marginBottom="200dp"
-                android:layout_gravity="left"
-                android:background=""
                 android:scaleType="centerInside"
-                app:srcCompat="@drawable/ic_baseline_access_time_24" />
-
+                android:src="@drawable/ic_baseline_access_time_24" />
 
 
         </TableLayout>
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

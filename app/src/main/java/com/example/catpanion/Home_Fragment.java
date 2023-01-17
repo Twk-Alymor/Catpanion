@@ -10,12 +10,16 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
+
+import javax.annotation.Nullable;
 
 
 public class Home_Fragment extends Fragment {
 
     ImageButton heartBTN;
 
+    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -43,4 +47,6 @@ public class Home_Fragment extends Fragment {
         return view;
 
     }
+
+
 }

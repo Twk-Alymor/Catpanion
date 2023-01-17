@@ -12,11 +12,33 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:fontFamily="@font/quicksand_bold"
         android:text="@string/fill_up"
         android:textColor="@color/_black"
         android:textSize="25sp" />
+
+    <!-- Picture -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardCornerRadius="75dp">
+
+        <ImageView
+            android:id="@+id/user_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cat3"
+            android:clickable="true"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/set_image_of_user"/>
+
+    </androidx.cardview.widget.CardView>
 
     <!-- Name -->
     <TextView
@@ -25,7 +47,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/quicksand_bold"
-        android:text="@string/name"
+        android:text="@string/username"
         android:textColor="@color/_black"
         android:textSize="18sp" />
 
@@ -39,7 +61,7 @@
         android:background="@drawable/custom_button"
         android:elevation="10dp"
         android:fontFamily="@font/quicksand_book"
-        android:hint="@string/name1"
+        android:hint="@string/username1"
         android:inputType="text"
         android:paddingStart="10dp"
         android:textColor="@color/_black"
@@ -103,45 +125,26 @@
         android:textColorHint="@color/_hint_Darkbg"
         android:textSize="18sp" />
 
-    <!-- Email -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="5dp"
-        android:fontFamily="@font/quicksand_bold"
-        android:text="@string/email"
-        android:textColor="@color/_black"
-        android:textSize="18sp" />
-
-    <EditText
-        android:id="@+id/editTextEmail1"
-        android:layout_width="350dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="25dp"
-        android:autofillHints=""
-        android:background="@drawable/custom_button"
-        android:elevation="10dp"
-        android:fontFamily="@font/quicksand_book"
-        android:hint="@string/email1"
-        android:inputType="textEmailAddress"
-        android:paddingStart="10dp"
-        android:textColor="@color/_black"
-        android:textColorHint="@color/_hint_Darkbg"
-        android:textSize="18sp" />
-
     <Button
-        android:id="@+id/button"
+        android:id="@+id/create_profileBTN"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:fontFamily="@font/quicksand_bold"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/custom_button"
         android:text="@string/done"
         android:textColor="@color/black"
         android:onClick="Signup_Done"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressbar_signupDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        android:indeterminateTint="@color/_green"
         />
 
 </LinearLayout>
