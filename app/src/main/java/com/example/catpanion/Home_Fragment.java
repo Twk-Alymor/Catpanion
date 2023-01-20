@@ -1,8 +1,10 @@
 package com.example.catpanion;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +22,8 @@ import javax.annotation.Nullable;
 public class Home_Fragment extends Fragment {
 
     ImageButton heartBTN, heartBTN2;
+    TableLayout post1, post2;
+    FragmentTransaction ft;
 
     @Nullable
     @Override
@@ -31,11 +36,21 @@ public class Home_Fragment extends Fragment {
 
         heartBTN = (ImageButton) view.findViewById(R.id.heartButton);
         heartBTN2 = (ImageButton) view.findViewById(R.id.heartButton2);
+        post1 = (TableLayout) view.findViewById(R.id.tableLayout);
+        post2 = (TableLayout) view.findViewById(R.id.tableLayout2);
 
         // HEART AND UNHEART
         heartBTN.setOnClickListener(hearted);
         heartBTN2.setOnClickListener(hearted);
 
+        // POST CLICK
+        post1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               ft = getFragmentManager().beginTransaction().replace(R.id.fragment_container, new Post_Clicked_Fragment());
+               ft.commit();
+            }
+        });
 
         // INFLATE THE LAYOUT FOR THIS FRAGMENT
             // return inflater.inflate(R.layout.fragment_home_, container, false);

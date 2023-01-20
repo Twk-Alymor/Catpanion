@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/_black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        tools:context=".Home"
+        tools:openDrawer="start">
+
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="89dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/desc_catpanionlogo"
+            android:src="@drawable/cat1"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="143dp"
+            tools:layout_editor_absoluteY="99dp" />
+
+        <!-- CAT DETAILS -->
+        <TableLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textborder">
+
+            <!-- NAME -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/l_name"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/_beige"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:paddingTop="3dp"
+                    android:text="@string/nameofCat"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/t_name"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:width="10dip"
+                    android:background="@drawable/textborder"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:paddingTop="3dp"
+                    android:text="Popoy"
+                    android:textAlignment="center"
+                    android:textColor="@color/_beige" />
+
+            </TableRow>
+
+            <!-- AGE -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/l_age"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/_beige"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:paddingTop="3dp"
+                    android:text="@string/catage"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/t_age"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:width="10dip"
+                    android:background="@drawable/textborder"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:paddingTop="3dp"
+                    android:text="@string/CatAge1"
+                    android:textAlignment="center"
+                    android:textColor="@color/_beige" />
+
+            </TableRow>
+
+            <!-- GENDER -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/l_gend"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/_beige"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:paddingTop="3dp"
+                    android:text="@string/gender"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/t_gend"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:width="10dip"
+                    android:background="@drawable/textborder"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:paddingTop="3dp"
+                    android:text="@string/isMale"
+                    android:textAlignment="center"
+                    android:textColor="@color/_beige" />
+
+            </TableRow>
+
+            <!-- LOCATION -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/l_loc"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/_beige"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:paddingTop="3dp"
+                    android:text="@string/location"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/t_loc"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:width="10dip"
+                    android:background="@drawable/textborder"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:paddingTop="3dp"
+                    android:text="@string/cat_loc"
+                    android:textAlignment="center"
+                    android:textColor="@color/_beige" />
+
+            </TableRow>
+
+            <!-- COLOR AND PATTERN -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/l_color"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="10dp"
+                    android:background="@color/_beige"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:paddingTop="3dp"
+                    android:text="@string/coat_color_and_pattern"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/t_color"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:width="10dip"
+                    android:background="@drawable/textborder"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:paddingTop="3dp"
+                    android:text="@string/catColor"
+                    android:textAlignment="center"
+                    android:textColor="@color/_beige"
+                    tools:ignore="RtlCompat" />
+
+            </TableRow>
+
+            <!-- SPAYED OR NEUTERED -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/l_spayORNeu"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="10dp"
+                    android:background="@color/_beige"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:paddingTop="3dp"
+                    android:text="@string/spayORNeu"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/t_spayORNeu"
+                        android:layout_width="110dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:width="10dip"
+                        android:background="@drawable/textborder"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:paddingTop="3dp"
+                        android:text="@string/yes"
+                        android:textAlignment="center"
+                        android:textColor="@color/_beige" />
+
+                    <TextView
+                        android:id="@+id/t_proof"
+                        android:layout_width="110dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:padding="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/proof_document_s"
+                        android:textAlignment="center"
+                        android:textColor="@color/_green"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:textSize="11sp"
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <!-- VACCINES -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/l_rabies"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="10dp"
+                    android:background="@color/_beige"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:paddingTop="3dp"
+                    android:text="@string/rabies_vaccine"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/t_rabies"
+                        android:layout_width="110dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:width="10dip"
+                        android:background="@drawable/textborder"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:paddingTop="3dp"
+                        android:text="@string/yes"
+                        android:textAlignment="center"
+                        android:textColor="@color/_beige" />
+
+                    <TextView
+                        android:id="@+id/t_proof2"
+                        android:layout_width="110dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:padding="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/proof_document_s"
+                        android:textAlignment="center"
+                        android:textColor="@color/_green"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:textSize="11sp"
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/l_fvrcp"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="10dp"
+                    android:background="@color/_beige"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:paddingTop="3dp"
+                    android:text="FVRCP Vaccine"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/t_fvrcp"
+                        android:layout_width="110dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:width="10dip"
+                        android:background="@drawable/textborder"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:paddingTop="3dp"
+                        android:text="@string/yes"
+                        android:textAlignment="center"
+                        android:textColor="@color/_beige" />
+
+                    <TextView
+                        android:id="@+id/t_proof3"
+                        android:layout_width="110dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:padding="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/proof_document_s"
+                        android:textAlignment="center"
+                        android:textColor="@color/_green"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:textSize="11sp"
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/l_feLV"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="10dp"
+                    android:background="@color/_beige"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:paddingTop="3dp"
+                    android:text="FeLV Vaccine"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/t_feLV"
+                        android:layout_width="110dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:width="10dip"
+                        android:background="@drawable/textborder"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:paddingTop="3dp"
+                        android:text="@string/yes"
+                        android:textAlignment="center"
+                        android:textColor="@color/_beige" />
+
+                    <TextView
+                        android:id="@+id/t_proof4"
+                        android:layout_width="110dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:padding="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/proof_document_s"
+                        android:textAlignment="center"
+                        android:textColor="@color/_green"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:textSize="11sp"
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

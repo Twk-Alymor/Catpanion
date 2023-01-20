@@ -65,4 +65,14 @@ You can now proceed to look for pets you wanted to adopt.</string>
     <string name="userName"></string>
     <string name="userPhone"></string>
     <string name="userAddr"></string>
+    <string name="gender">Gender:</string>
+    <string name="isMale">Male</string>
+    <string name="location">Location:</string>
+    <string name="cat_loc">Taguig City</string>
+    <string name="catColor">Bi-color</string>
+    <string name="coat_color_and_pattern">Coat Color and Pattern</string>
+    <string name="yes">Yes</string>
+    <string name="spayORNeu">Spayed/Neutered</string>
+    <string name="proof_document_s">Proof Document/s</string>
+    <string name="rabies_vaccine">Rabies Vaccine</string>
 </resources>
