@@ -17,15 +17,24 @@
         tools:context=".Home"
         tools:openDrawer="start">
 
-        <ImageView
-            android:layout_width="125dp"
-            android:layout_height="89dp"
+        <!-- Picture -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_gravity="center"
-            android:contentDescription="@string/desc_catpanionlogo"
-            android:src="@drawable/cat1"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="143dp"
-            tools:layout_editor_absoluteY="99dp" />
+            android:layout_margin="5dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardCornerRadius="75dp">
+
+            <ImageView
+                android:id="@+id/user_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cat1"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/set_image_of_user"/>
+
+        </androidx.cardview.widget.CardView>
 
         <!-- CAT DETAILS -->
         <TableLayout
@@ -457,6 +466,22 @@
             </TableRow>
 
         </TableLayout>
+
+        <!-- ADOPT ME BUTTON -->
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/loginBTN"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/quicksand_bold"
+            android:layout_margin="25dp"
+            android:background="@color/_beige"
+            android:text ="@string/adopt_me"
+            android:drawableStart="@drawable/ic_pet"
+            android:paddingStart="10dp"
+            android:textColor="@color/black"
+            tools:ignore="RtlSymmetry" />
 
 
 
