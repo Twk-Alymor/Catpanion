@@ -6,9 +6,12 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.PreferenceManager;
 
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -50,6 +53,12 @@ public class SignUpDetails extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference;
 
+    // INPUT OF USER
+    static String userName;
+    static String userPhone;
+    static String userAddr;
+    SharedPreferences sp;
+
     All_Users member;
 
     ActivityResultLauncher<String> mTakePhoto;
@@ -60,6 +69,7 @@ public class SignUpDetails extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up_details);
 
         databaseReference = firebaseDatabase.getReference();
+        sp = getSharedPreferences("MyUSerPrefs", Context.MODE_PRIVATE);
 
         etname = (EditText) findViewById(R.id.editTextName);
         etaddr = (EditText) findViewById(R.id.editTextAddress);
@@ -71,34 +81,27 @@ public class SignUpDetails extends AppCompatActivity {
         saveToRealtimeDatabasse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(SignUpDetails.this, Home.class);
                 String getName = etname.getText().toString();
                 String getPhone = etphone.getText().toString();
                 String getAddr = etaddr.getText().toString();
 
-                HashMap<String, Object> hashMap = new HashMap<>();
-                hashMap.put("name", getName);
-                hashMap.put("phone", getPhone);
-                hashMap.put("address", getAddr);
+                SharedPreferences saved_values = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                SharedPreferences.Editor editor = saved_values.edit();
+                editor.putString("nameOfUser", getName);
+                editor.putString("phoneOfUser", getPhone);
+                editor.putString("addrOfUser", getAddr);
+                editor.commit();
 
-                databaseReference.child("Users")
-                        .child(getName)
-                        .setValue(hashMap)
-                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void unused) {
-                                Toast.makeText(SignUpDetails.this, "Data added sucessfully", Toast.LENGTH_SHORT).show();
-                            }
-                        })
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(SignUpDetails.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
-                            }
-                        });
+                Toast.makeText(SignUpDetails.this, "Information saved", Toast.LENGTH_SHORT).show();
 
+                Intent i = new Intent(SignUpDetails.this, Home.class);
+                //i.putExtra("user_name", getName);
+                //i.putExtra("user_phone", getPhone);
+                //i.putExtra("user_addr", getAddr);
                 startActivity(i);
             }
+
+
         });
     }
 

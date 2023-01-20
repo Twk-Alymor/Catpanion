@@ -11,13 +11,14 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import javax.annotation.Nullable;
 
 
 public class Home_Fragment extends Fragment {
 
-    ImageButton heartBTN;
+    ImageButton heartBTN, heartBTN2;
 
     @Nullable
     @Override
@@ -27,20 +28,14 @@ public class Home_Fragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_home_, container, false);
         View view = getLayoutInflater().inflate(R.layout.fragment_home_,container, false);
 
-        // HEART AND UNHEART
-        heartBTN = (ImageButton) view.findViewById(R.id.heartButton);
-        heartBTN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(heartBTN.getDrawable().getConstantState() ==
-                        getResources().getDrawable(R.drawable.no_heart).getConstantState()){
 
-                    heartBTN.setImageResource(R.drawable.yes_heart);
-                } else {
-                    heartBTN.setImageResource(R.drawable.no_heart);
-                }
-            }
-        });
+        heartBTN = (ImageButton) view.findViewById(R.id.heartButton);
+        heartBTN2 = (ImageButton) view.findViewById(R.id.heartButton2);
+
+        // HEART AND UNHEART
+        heartBTN.setOnClickListener(hearted);
+        heartBTN2.setOnClickListener(hearted);
+
 
         // INFLATE THE LAYOUT FOR THIS FRAGMENT
             // return inflater.inflate(R.layout.fragment_home_, container, false);
@@ -48,5 +43,35 @@ public class Home_Fragment extends Fragment {
 
     }
 
+
+    /** HEART AND UNHEART **/
+    public View.OnClickListener hearted = new View.OnClickListener() {
+        @Override
+        public void onClick(View v){
+            switch(v.getId()){
+                case R.id.heartButton:
+                    if(heartBTN.getDrawable().getConstantState() ==
+                            getResources().getDrawable(R.drawable.no_heart).getConstantState()){
+
+                        heartBTN.setImageResource(R.drawable.yes_heart);
+                        Toast.makeText(getActivity(), "Added to Favorites!", Toast.LENGTH_SHORT).show();
+                    } else {
+                        heartBTN.setImageResource(R.drawable.no_heart);
+                    }
+                    break;
+
+                case R.id.heartButton2:
+                    if(heartBTN2.getDrawable().getConstantState() ==
+                            getResources().getDrawable(R.drawable.no_heart).getConstantState()){
+
+                        heartBTN2.setImageResource(R.drawable.yes_heart);
+                    } else {
+                        heartBTN2.setImageResource(R.drawable.no_heart);
+                        Toast.makeText(getActivity(), "Added to Favorites!", Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+            }
+        }
+    };
 
 }

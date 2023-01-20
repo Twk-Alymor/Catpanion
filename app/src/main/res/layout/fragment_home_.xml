@@ -118,6 +118,7 @@
                         android:contentDescription="@string/no_heart"
                         android:scaleType="centerCrop"
                         android:src="@drawable/no_heart"
+                        android:onClick="hearted"
                         tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck,TouchTargetSizeCheck" />
 
                 </TableRow>
@@ -136,137 +137,111 @@
             app:cardCornerRadius="11dp"
             app:cardElevation="3dp"
             app:cardUseCompatPadding="true">
-
-            <!-- Inside Card #2 -->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linearLayout2"
+            <!-- Inside Card #1 -->
+            <TableLayout
+                android:id="@+id/tableLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/_darkBeige">
+                android:background="@color/_darkBeige"
+                android:layout_gravity="center_vertical">
                 <!-- Picture -->
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/catImg2"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/cat2"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.023"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:shapeAppearanceOverlay="@style/Circular"
-                    app:strokeColor="@color/_black"
-                    app:strokeWidth="5dp"
-                    tools:ignore="ImageContrastCheck" />
+                <TableRow
+                    android:layout_margin="10dp">
 
-                <!-- Details -->
-                <TextView
-                    android:id="@+id/cat_Name2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="23dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="42dp"
-                    android:layout_marginEnd="58dp"
-                    android:layout_marginBottom="26dp"
-                    android:layout_toEndOf="@+id/catName2"
-                    android:fontFamily="@font/quicksand_bold"
-                    android:text="@string/catName2"
-                    android:textColor="@color/_black"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toTopOf="@+id/cat_Age2"
-                    app:layout_constraintEnd_toStartOf="@+id/heartButton2"
-                    app:layout_constraintStart_toEndOf="@+id/catName2"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0"
-                    tools:ignore="TextContrastCheck" />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/catImg2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cat2"
+                        app:shapeAppearanceOverlay="@style/Circular"
+                        app:strokeColor="@color/_black"
+                        app:strokeWidth="5dp"
+                        tools:ignore="ImageContrastCheck" />
 
-                <TextView
-                    android:id="@+id/catName2"
-                    android:layout_width="64dp"
-                    android:layout_height="23dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="13dp"
-                    android:layout_marginTop="44dp"
-                    android:layout_marginEnd="22dp"
-                    android:layout_marginBottom="26dp"
-                    android:layout_toEndOf="@+id/catImg2"
-                    android:fontFamily="@font/quicksand_book"
-                    android:text="@string/nameofCat"
-                    android:textColor="@color/_black"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toTopOf="@+id/catAge2"
-                    app:layout_constraintEnd_toStartOf="@+id/cat_Name2"
-                    app:layout_constraintStart_toEndOf="@+id/catImg2"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TextContrastCheck" />
+                    <!-- Details -->
+                    <TableLayout
+                        android:id="@+id/tableLayout_details2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="2">
 
-                <TextView
-                    android:id="@+id/cat_Age2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="23dp"
-                    android:layout_below="@+id/cat_Name2"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="111dp"
-                    android:layout_marginBottom="48dp"
-                    android:layout_toEndOf="@+id/catName2"
-                    android:fontFamily="@font/quicksand_bold"
-                    android:text="@string/catAge2"
-                    android:textColor="@color/_black"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/catAge2"
-                    app:layout_constraintTop_toBottomOf="@+id/cat_Name2"
-                    tools:ignore="TextContrastCheck" />
+                        <TableRow>
 
-                <TextView
-                    android:id="@+id/catAge2"
-                    android:layout_width="0dp"
-                    android:layout_height="23dp"
-                    android:layout_below="@+id/catName2"
-                    android:layout_marginStart="21dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="50dp"
-                    android:layout_toEndOf="@+id/catImg2"
-                    android:fontFamily="@font/quicksand_book"
-                    android:text="@string/catage"
-                    android:textColor="@color/_black"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/cat_Age2"
-                    app:layout_constraintHorizontal_bias="0.866"
-                    app:layout_constraintStart_toEndOf="@+id/catImg2"
-                    app:layout_constraintTop_toBottomOf="@+id/catName2"
-                    tools:ignore="TextContrastCheck" />
+                            <TextView
+                                android:id="@+id/catName2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="0.5"
+                                android:fontFamily="@font/quicksand_book"
+                                android:text="@string/nameofCat"
+                                android:textColor="@color/_black"
+                                android:textSize="15sp"
+                                tools:ignore="TextContrastCheck" />
 
-                <ImageButton
-                    android:id="@+id/heartButton2"
-                    android:layout_width="45dp"
-                    android:layout_height="41dp"
-                    android:layout_alignBottom="@+id/catImg2"
-                    android:layout_alignParentEnd="true"
-                    android:background="@android:color/transparent"
-                    android:contentDescription="@string/no_heart"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/no_heart"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.953"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.141"
-                    tools:ignore="ImageContrastCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+                            <TextView
+                                android:id="@+id/cat_Name2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="2"
+                                android:fontFamily="@font/quicksand_bold"
+                                android:text="@string/catName2"
+                                android:textColor="@color/_black"
+                                android:textSize="15sp"
+                                tools:ignore="TextContrastCheck" />
+                        </TableRow>
 
-                <FrameLayout
-                    android:id="@+id/fragment_container"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    tools:layout_editor_absoluteX="-4dp"
-                    tools:layout_editor_absoluteY="-230dp" />
+                        <TableRow
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:id="@+id/catAge2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/quicksand_book"
+                                android:text="@string/catage"
+                                android:textColor="@color/_black"
+                                android:textSize="15sp"
+                                tools:ignore="TextContrastCheck" />
+
+                            <TextView
+                                android:id="@+id/cat_Age2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/quicksand_bold"
+                                android:text="@string/catAge2"
+                                android:textColor="@color/_black"
+                                android:textSize="15sp"
+                                tools:ignore="TextContrastCheck" />
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </TableRow>
+                    </TableLayout>
+
+
+                    <ImageButton
+                        android:id="@+id/heartButton2"
+                        android:layout_width="45dp"
+                        android:layout_height="41dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/no_heart"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/no_heart"
+                        android:onClick="hearted"
+                        tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck,TouchTargetSizeCheck" />
+
+                </TableRow>
+
+
+
+            </TableLayout>
         </androidx.cardview.widget.CardView>
 
 

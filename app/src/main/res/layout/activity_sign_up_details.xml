@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/_beige"
     android:orientation="vertical"
+
     tools:context=".SignUpDetails">
 
     <!-- Fill up Start -->

@@ -61,4 +61,8 @@ You can now proceed to look for pets you wanted to adopt.</string>
     <string name="username">Username:</string>
     <string name="username1">Username</string>
     <string name="set_image_of_user">Set image of User</string>
+
+    <string name="userName"></string>
+    <string name="userPhone"></string>
+    <string name="userAddr"></string>
 </resources>
