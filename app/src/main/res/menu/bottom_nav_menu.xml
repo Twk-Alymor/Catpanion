@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- INVISIBLE -->
+    <item
+        android:id="@+id/nav_invisible_"
+        android:visible="false"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
+
+    <!-- SEARCH -->
+    <item
+        android:id="@+id/nav_search_"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="@string/nav_search"/>
+
+    <!-- FAVORITES -->
+    <item
+        android:id="@+id/nav_fav_"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="@string/nav_favorites"/>
+
+    <!-- MESSAGES -->
+    <item
+        android:id="@+id/nav_messages_"
+        android:icon="@drawable/ic_baseline_message_24"
+        android:title="@string/nav_messages"/>
+
+    <!-- PLACES -->
+    <item
+        android:id="@+id/nav_places_"
+        android:icon="@drawable/ic_home"
+        android:title="@string/nav_places"/>
+
+</menu>

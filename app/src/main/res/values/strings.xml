@@ -76,4 +76,8 @@ You can now proceed to look for pets you wanted to adopt.</string>
     <string name="proof_document_s">Proof Document/s</string>
     <string name="rabies_vaccine">Rabies Vaccine</string>
     <string name="adopt_me">Adopt Me</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_favorites">Favorites</string>
+    <string name="nav_messages">Messages</string>
+    <string name="nav_places">Places</string>
 </resources>

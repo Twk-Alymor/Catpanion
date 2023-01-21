@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:layout_editor_absolute_X="1dp"
+    tools:layout_editor_absolute_Y="1dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/_black"
+        android:fitsSystemWindows="true"
+        tools:context=".Home"
+        tools:openDrawer="start">
+
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="66dp"
+            android:layout_height="68dp"
+            android:background="@drawable/background_beige"
+            app:srcCompat="@drawable/ic_baseline_add_24"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="329dp"
+            tools:layout_editor_absoluteY="512dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="109dp"
+            android:layout_height="24dp"
+            android:background="#8C8879"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="M O R E"
+            android:textColor="@color/_beige"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="187dp"
+            tools:layout_editor_absoluteY="239dp" />
+
+        <TextView
+            android:id="@+id/Favorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="MY FAVORITES"
+            android:textColor="@color/_beige"
+            android:textSize="25dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="114dp"
+            tools:layout_editor_absoluteY="108dp" />
+
+        <TableLayout
+            android:layout_width="358dp"
+            android:layout_height="118dp"
+            android:background="@drawable/section_backgound"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="153dp">
+
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="156dp"
+            android:layout_height="50dp"
+            android:background="@drawable/boderr_brown"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="159dp"
+            tools:layout_editor_absoluteY="177dp">
+
+
+        </TableLayout>
+
+        <ImageButton
+            android:id="@+id/liked"
+            android:layout_width="54dp"
+            android:layout_height="48dp"
+            android:background="@drawable/section_backgound"
+            app:srcCompat="@drawable/ic_baseline_favorite_24"
+            tools:layout_editor_absoluteX="316dp"
+            tools:layout_editor_absoluteY="153dp"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

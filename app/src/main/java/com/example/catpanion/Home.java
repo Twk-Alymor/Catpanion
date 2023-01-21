@@ -4,14 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
@@ -24,12 +22,12 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.badge.BadgeDrawable;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import org.jetbrains.annotations.NonNls;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -38,10 +36,12 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     TextView navUser;
     FirebaseAuth firebaseAuth;
 
-    String userName;
-    String userPhone;
-    String userAddr;
-
+    // For Bottom Navigation
+    BottomNavigationView bottomNavigationView;
+    Search_Fragment frag_search = new Search_Fragment();
+    Favorites_Fragment frag_favorites = new Favorites_Fragment();
+    Messages_Fragment frag_messages = new Messages_Fragment();
+    Places_Fragment frag_places = new Places_Fragment();
 
     Fragment home;
 
@@ -81,10 +81,32 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         if(savedInstanceState == null){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home_Fragment()).commit();
-            navigationView.setCheckedItem(R.id.nav_home);
+            navigationView.setCheckedItem(R.id.nav_invisible_);
         }
 
-
+        /** BOTTOM NAVIGATION VIEW == NOT WORKING **/
+        bottomNavigationView = findViewById(R.id.bottom_nav);
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.nav_search_:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag_search).commit();
+                        return true;
+                    case R.id.nav_fav_:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag_favorites).commit();
+                        return true;
+                    case R.id.nav_messages_:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag_messages).commit();
+                        return true;
+                    case R.id.nav_places_:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag_places).commit();
+                        return true;
+                    default:
+                        return false;
+                }
+            }
+        });
 
 
         /** FOR WIDGETS
